@@ -12,7 +12,7 @@ load_dotenv()
 
 async def main():
     await async_main()
-    bot = Bot(token='7321221051:AAFtWM0S5DXLpojwDWFoTMj8PSJ-TVowfAs')
+    bot = Bot(token=os.getenv("BOT_TOKEN"))
     dp = Dispatcher()
     dp.include_router(router)
     await dp.start_polling(bot)
